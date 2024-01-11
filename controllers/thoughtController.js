@@ -1,3 +1,4 @@
+const { response } = require('express');
 const { User, Thought } = require('../models');
 
 module.exports = {
@@ -33,7 +34,38 @@ module.exports = {
             { $set: req.body },
             { runValidators: true, new: true },
         )
-        .catch((err) => res.status(500).json(err));
+            .then((user) =>
+                !user ? res.status(404).json({ message: "No thought found with that ID!" })
+                    : res.json(user)
+            )
+            .catch((err) => res.status(500).json(err));
     },
-    deleteThought
-}
+    deleteThought(req, res) {
+        Thought.findOneAndDelete({ _id: req.params.thoughtId })
+            .then((thought) => !thought ? res.status(404).json({ message: 'No thought found with that ID!' })
+                : User.findOneAndUpdate(
+                    { thoughts: req.params.thoughtId },
+                    { $pull: { thoughts: req.params.thoughtId } },
+                    { new: true }
+                ))
+            .then((user) =>
+                !user ? response.status(404).json({ message: 'Thought deleted but found no user with that ID!' })
+                    : response.json({ message: 'Thought deleted!' })
+            )
+            .catch((err) => response.status(500).json(err));
+    },
+    createReaction(req, res) {
+        Thought.findOneAndUpdate(
+            { _id: req.params.thoughtId },
+            { $addToSet: { reactions: req.body}},
+            { runValidators: true, new: true }
+        )
+        .then((thought) => !thought ?res.status(404).json({ messages: 'No thought found with that ID!'})
+        :res.json(thought)
+        )
+        .catch((error) => res.status(500).json(err));
+    },
+    deleteReaction(req, res) {
+        
+    }
+};
