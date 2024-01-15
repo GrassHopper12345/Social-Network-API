@@ -5,7 +5,7 @@ const reactionSchema = new Schema(
   {
     reactionId: {
       type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId,
+      default: () => new Types.ObjectId(),
     },
     reactionBody: {
       type: String,
@@ -26,7 +26,7 @@ const reactionSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
-      getters: true,
+      getters: true
     },
     id: false,
   }
@@ -39,7 +39,7 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
       minlength: 1,
-      maxlength: 255, xlength: 255,
+      maxlength: 255,
     },
     createdAt: {
       type: Date,
@@ -47,9 +47,8 @@ const thoughtSchema = new Schema(
       get: createAtVal => moment(createAtVal).format('DD.MM.YYYY [at] HH:mm:ss'),
     },
     username: {
-      type: Number,
+      type: String,
       required: true,
-      default: () => Math.floor(Math.random() * (100 - 70 + 1) + 70),
     },
     reactions: [reactionSchema],
   },
@@ -61,7 +60,7 @@ const thoughtSchema = new Schema(
   }
 );
 
-thoughtSchema.virtual('reactionCount').get(function(){
+thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length
 })
 

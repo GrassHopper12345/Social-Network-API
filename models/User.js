@@ -8,13 +8,13 @@ const userSchema = new Schema(
       required: true,
       unique: true,
       trim: true,
-      max_length: 50,
+      maxlength: 50,
     },
     email: {
       type: String,
       required: true,
       unique: true,
-      max_length: 50,
+      maxlength: 50,
       match: [
         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
         "Please enter a valid email address"
@@ -34,7 +34,7 @@ const userSchema = new Schema(
     ],
   },
   {
-    toJson: {
+    toJSON: {
       virtuals: true,
     },
     id: false,
