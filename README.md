@@ -40,9 +40,31 @@ This API is for a social network application where a user can share their person
 
 ![Alt text](<Screenshot 2024-01-15 at 9.42.35 PM.png>)
 
-To CREATE a new user, select `POST` request and enter the new user's username and email address following the models-User.js format. Click `Send`.
+- To CREATE a new user, select `POST` request and enter the new user's username and email address following the models-User.js format. Click `Send`.
 
+- A user can serch all users by utilizing the `GET` All Users route or `GET` All Users by ID.
 
+- A user can also update a User by utilizing the `PUT` route.
+
+6. Friend Routes - a user can add and delete a friend.
+
+![Alt text](<Screenshot 2024-01-16 at 1.25.48 PM.png>)
+
+- To add a Friend, select the `POST` request. In the URL, enter the user ID of the user who is adding a friend, then the user ID of the friend the user is wanting to add.
+
+- A user can view all friends by going to User routes and viewing all users. When a user `Finds All Users` under `Friends`, the user can view the number of friends a User has by viewing the `friendCount`.
+
+- A user can `DELETE` a friend by selecting the `DELETE` request method and typing in the `friendCount` URL the user ID of the user that is wanting to delete a friend and the user ID of the friend that must will be deleted following.
+
+- A user can then check `Find All Users` to check if friend was properly deleted.
+
+7. Thought routes - a user can create a thought, get all thoughts, get a single thought by ID, update a thought by ID, and delete a thought by ID.
+
+![Alt text](<Screenshot 2024-01-16 at 1.52.04 PM.png>)
+
+- To create a new thought, select the `POST` request. The user can then enter the `thoughtText`, `username`, and `userID` of the user creatingthe thought.
+
+- 
 
 ## Installation
 - Clone this repository in a code editor similar to VS Code on your local machine.
