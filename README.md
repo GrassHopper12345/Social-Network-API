@@ -1,5 +1,7 @@
 # Social-Network-API
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GrassHopper12345/Social-Network-API/blob/main/LICENSE)
+
 ## Description
 This API is for a social network application where a user can share their personal or professional thoughts, react to a friends' thought or thoughts, as well as creat a friends list. The web application uses `MongoDB` for databases, `Mongoose` for ODM, `Express.js` for routing, and `Moment.js` for date & timestamps. The data is seeded using `Insomnia`.
 
@@ -67,7 +69,7 @@ To CREATE a new user, select `POST` request and enter the new user's username an
 
 ## License
 
-MIT License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GrassHopper12345/Social-Network-API/blob/main/LICENSE)
 
 Copyright (c) 2024 BrianH
 
