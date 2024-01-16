@@ -69,4 +69,5 @@ To CREATE a new user, select `POST` request and enter the new user's username an
 
 
 ## Questions
-
+If you have an questions please email me at: [brian.hopper@live.com](brian.hopper@live.com).
+My GitHub page is: [GrassHopper12345](https://github.com/Grasshopper12345)
