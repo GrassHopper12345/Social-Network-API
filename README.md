@@ -12,7 +12,6 @@ This API is for a social network application where a user can share their person
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tech](#tech)
-- [Testing](#testing)
 - [License](#license)
 - [Questions](#questions)
 
@@ -46,7 +45,7 @@ This API is for a social network application where a user can share their person
 
 - A user can also update a User by utilizing the `PUT` route.
 
-6. Friend Routes - a user can add and delete a friend.
+6. Friend Routes - a user can `CREATE` and `DELETE` a Friend.
 
 ![Alt text](<Screenshot 2024-01-16 at 1.25.48 PM.png>)
 
@@ -58,13 +57,34 @@ This API is for a social network application where a user can share their person
 
 - A user can then check `Find All Users` to check if friend was properly deleted.
 
-7. Thought routes - a user can create a thought, get all thoughts, get a single thought by ID, update a thought by ID, and delete a thought by ID.
+7. Thought routes - a user can `CREATE` a thought, `GET` all thoughts, `GET` a single thought by ID, update a thought by ID using `PUT`, and `DELETE` a thought by ID.
 
 ![Alt text](<Screenshot 2024-01-16 at 1.52.04 PM.png>)
 
 - To create a new thought, select the `POST` request. The user can then enter the `thoughtText`, `username`, and `userID` of the user creatingthe thought.
 
-- 
+- To get all thoughts, a user can select `GET` All Thoughts and select send to view all thoughts.
+
+- To update a thought, a user can select the `PUT` request input in the URL the thought ID and the wanted changes in the `textBody`.
+
+- To delete a thought, a user can select the `DELETE` request and input the thought ID into the URL and select the `Send` button.
+
+- A user can check is all requests have successfully be completed by checking the `GET` All Thoughts request.
+
+8. Reaction Routes - a user can `CREATE` and `DELETE` a reaction.
+
+![Alt text](<Screenshot 2024-01-16 at 3.10.55 PM.png>)
+
+- To `CREATE` a Reaction, a user must select the `POST` request and enter the ID of the thought the user wants to react or comment on. Then the user shall enter the `reactionBody` and `username` in json form to create a reaction.
+
+- To check if the creation was successful, a use can select the `GET` All Thoughts to see the reaction. 
+
+- To delete the reaction, a user shall select the `DELETE` request and enter into the URL the thought ID where the reaction will be deleted from and the reaction ID.
+
+9. MongoDB - Once the data has been created in Insomnia, A user can view the seed data in MongoDB.
+
+![Alt text](<Screenshot 2024-01-16 at 3.16.49 PM.png>)
+![Alt text](<Screenshot 2024-01-16 at 3.17.15 PM.png>)
 
 ## Installation
 - Clone this repository in a code editor similar to VS Code on your local machine.
@@ -85,9 +105,6 @@ This API is for a social network application where a user can share their person
 - [Insomnia](https://insomnia.rest/)
 - [Express.js](https://expressjs.com/)
 - [Moment.js](https://www.npmjs.com/package/moment)
-
-## Testing
-
 
 ## License
 
