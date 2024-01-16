@@ -18,7 +18,7 @@ This API is for a social network application where a user can share their person
 
 
 ## Application Overview
-
+![Alt text](<Screenshot 2024-01-15 at 9.31.26 PM.png>)
 
 ## Features
 1. This is an API based social network that utilizes the noSQL database, MongoDB, by allowing a user to structure the large quantity of unstructured data.
