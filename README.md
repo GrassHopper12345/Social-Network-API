@@ -16,7 +16,7 @@ This API is for a social network application where a user can share their person
 - [Questions](#questions)
 
 ## Walk-Through Video
-
+[Walk-Through Video](https://drive.google.com/file/d/1rfbgOagY7XrbGLNajJRrbfb5_Zdh7Gu0/view)
 
 ## Application Overview
 ![Alt text](<Screenshot 2024-01-15 at 9.31.26 PM.png>)
