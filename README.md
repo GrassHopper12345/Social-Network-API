@@ -65,7 +65,8 @@ This API is for a social network application where a user can share their person
 
 - To get all thoughts, a user can select `GET` All Thoughts and select send to view all thoughts.
 
-- To update a thought, a user can select the `PUT` request input in the URL the thought ID and the wanted changes in the `textBody`.
+- To update a thought, a user can select the `PUT` request input in the URL the thought ID and the wanted changes in the `thoughtText`.
+![Alt text](<Screenshot 2024-01-18 at 10.55.08 AM.png>)
 
 - To delete a thought, a user can select the `DELETE` request and input the thought ID into the URL and select the `Send` button.
 
